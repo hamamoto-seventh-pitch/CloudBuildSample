@@ -13,4 +13,4 @@ steps:
       - cloud-run-test-334414
       - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
       - '--region=asia-northeast1'
-      - '--allow=unauthenticated'
+      - '--allow-unauthenticated'
