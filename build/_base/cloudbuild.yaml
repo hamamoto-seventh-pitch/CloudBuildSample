@@ -1,0 +1,13 @@
+steps:
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - builds 
+      - submit
+      - '--tag=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - run 
+      - deploy
+      - cloud-run-test-334414
+      - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
+      - '--region=asia-northeast1'
