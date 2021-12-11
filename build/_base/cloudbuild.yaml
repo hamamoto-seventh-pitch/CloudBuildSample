@@ -13,8 +13,8 @@ steps:
       - cloudbuild-sample-1
       - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
       - '--region=asia-northeast1'
-      - 'cpu=4000'
-      - '-memory=4096'
+      - '--cpu=4000'
+      - '--memory=4096'
       - '--allow-unauthenticated'
       - '--update-env-vars' 
       - 'USER_COUNT=10000,SERVER_NO=1'
