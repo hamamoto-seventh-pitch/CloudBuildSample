@@ -13,7 +13,7 @@ steps:
       - cloudbuild-sample-1
       - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
       - '--region=asia-northeast1'
-      - '--cpu=4000'
+      - '--cpu=4.0'
       - '--memory=4096'
       - '--allow-unauthenticated'
       - '--update-env-vars' 
@@ -26,7 +26,7 @@ steps:
       - cloudbuild-sample-2
       - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
       - '--region=asia-northeast1'
-      - '--cpu=4000'
+      - '--cpu=4.0'
       - '--memory=4096'
       - '--allow-unauthenticated'
       - '--update-env-vars' 
