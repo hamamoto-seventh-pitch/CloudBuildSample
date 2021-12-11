@@ -1,9 +1,11 @@
 steps:
+  # build the container image
   - name: gcr.io/cloud-builders/gcloud
     args:
       - builds 
       - submit
       - '--tag=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
+  # Deploy container image to Cloud Run
   - name: gcr.io/cloud-builders/gcloud
     args:
       - run 
@@ -11,3 +13,4 @@ steps:
       - cloud-run-test-334414
       - '--image=gcr.io/$PROJECT_ID/cloudbuild-sample:$COMMIT_SHA'
       - '--region=asia-northeast1'
+      - '--allow=unauthenticated'
