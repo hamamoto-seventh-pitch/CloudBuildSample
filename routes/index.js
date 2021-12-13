@@ -8,8 +8,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  let env = process.env.TEST_ENV;
-  res.render('index', { title: 'Express', env: env });
+  res.render('index', { title: process.env.USER_COUNT });
 });
 
 module.exports = router;

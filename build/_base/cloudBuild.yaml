@@ -33,5 +33,6 @@ steps:
       - '--allow-unauthenticated'
       - '--update-env-vars' 
       - 'USER_COUNT=10000,SERVER_NO=2'
-
+substitutions:
+  _ENV_TEST_USER_COUNT: xxxxxx
     
