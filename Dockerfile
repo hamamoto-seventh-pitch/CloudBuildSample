@@ -2,7 +2,7 @@ FROM node:12-slim
 
 WORKDIR /usr/src/app
 
-COPY .env ./
+# COPY .env ./
 
 COPY package*.json ./
 
