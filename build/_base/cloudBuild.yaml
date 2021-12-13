@@ -18,7 +18,7 @@ steps:
       - '--timeout=3600'
       - '--allow-unauthenticated'
       - '--update-env-vars' 
-      - 'USER_COUNT=10000,SERVER_NO=1'
+      - 'USER_COUNT=${_ENV_TEST_USER_COUNT},SERVER_NO=1'
   # Deploy container image to Cloud Run 2台目
   - name: gcr.io/cloud-builders/gcloud
     args:
